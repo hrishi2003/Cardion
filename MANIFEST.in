@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include cardion *.css
+recursive-include cardion *.csv
+recursive-include cardion *.html
+recursive-include cardion *.ico
+recursive-include cardion *.js
+recursive-include cardion *.json
+recursive-include cardion *.md
+recursive-include cardion *.png
+recursive-include cardion *.py
+recursive-include cardion *.svg
+recursive-include cardion *.txt
+recursive-exclude cardion *.pyc
