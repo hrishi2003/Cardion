@@ -92,13 +92,16 @@ fixtures = ["Custom Field","Property Setter","Print Format"]
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
+doc_events = {
+	"Patient" : {
+   		"autoname" : "cardion.docevents.patient.autoname"
+   },
 # 	"*": {
 # 		"on_update": "method",
 # 		"on_cancel": "method",
 # 		"on_trash": "method"
 #	}
-# }
+}
 
 # Scheduled Tasks
 # ---------------
