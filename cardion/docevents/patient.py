@@ -14,12 +14,6 @@ def autoname(doc, method):
    			return doc.uid
    		elif doc.sex == 'Non-Conforming' :
    			doc.uid = make_autoname("CHN-N-"+".####")
-   			return doc.uid
-        # elif doc.sex == 'Genderqueer' :
-        #     doc.uid = make_autoname("CNQ"+".####")
-        #     return doc.uid 
-        # elif doc.sex == 'Transgender' :
-   		# 	doc.uid = make_autoname("CNT"+".####")
-   		# 	return doc.uid              
+   			return doc.uid        
    		else :
    			return doc.uid
