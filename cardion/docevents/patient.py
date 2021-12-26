@@ -7,14 +7,14 @@ from frappe.model.naming import make_autoname
 def autoname(doc, method):
    	if doc.sex:
    		if doc.sex == 'Male' :
-   			doc.user_id = make_autoname("CHN-M-"+".####")
-   			return doc.user_id
+   			doc.uid = make_autoname("CHN-M-"+".####")
+   			return doc.uid
    		elif doc.sex == 'Female' :
-   			doc.user_id = make_autoname("CHN-F-"+".####")
-   			return doc.user_id
+   			doc.uid = make_autoname("CHN-F-"+".####")
+   			return doc.uid
    		elif doc.sex == 'Non-Conforming' :
-   			doc.user_id = make_autoname("CHN-N-"+".####")
-   			return doc.user_id
+   			doc.uid = make_autoname("CHN-N-"+".####")
+   			return doc.uid
         # elif doc.sex == 'Genderqueer' :
         #     doc.uid = make_autoname("CNQ"+".####")
         #     return doc.uid 
@@ -22,4 +22,4 @@ def autoname(doc, method):
    		# 	doc.uid = make_autoname("CNT"+".####")
    		# 	return doc.uid              
    		else :
-   			return doc.user_id
+   			return doc.uid

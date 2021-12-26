@@ -9,7 +9,7 @@ app_color = "grey"
 app_email = "hrishikesh.k@cardion.com"
 app_license = "MIT"
 
-fixtures = ["Custom Field","Property Setter","Print Format"]
+fixtures = ["Client Script","Custom Field","Property Setter","Print Format"]
 
 
 # Includes in <head>
