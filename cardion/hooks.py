@@ -96,6 +96,9 @@ doc_events = {
 	"Patient" : {
    		"autoname" : "cardion.docevents.patient.autoname"
    },
+   "Sales Invoice" :{
+	   "before_insert" : "cardion.docevents.sales_invoice.get_item"
+   }
 # 	"*": {
 # 		"on_update": "method",
 # 		"on_cancel": "method",

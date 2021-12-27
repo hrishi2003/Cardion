@@ -151,12 +151,11 @@ def get_item1(inpatient):
 
 	return m	
 	
-# @frappe.whitelist()
-# def get_item(item_code,):
-# 	a = frappe.get_doc('Sales Invoice Item',{'inpatient':})
-# 	if party_name:
-# 		lead = frappe.db.get_value("Lead",{'name':party_name},['utility'])
-# 		return lead	
 
+def get_item(doc,method):
+	for i in doc.items:
+		a = frappe.get_doc('Item Price',{'item_code':i.item_code})
+		i.rate = a.price_list_rate
+	
 	
 	
