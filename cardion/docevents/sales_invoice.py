@@ -153,9 +153,25 @@ def get_item1(inpatient):
 	
 
 def get_item(doc,method):
-	for i in doc.items:
-		a = frappe.get_doc('Item Price',{'item_code':i.item_code})
-		i.rate = a.price_list_rate
+	validate_item(doc)
+	# for i in doc.items:
+	# 	a = frappe.get_doc('Item Price',{'item_code':i.item_code})
+	# 	i.rate = a.price_list_rate
+
+
+def validate_item(doc): 
+	dict1 = {}
+	docitems = []
+	for items in doc.items:
+		dict1[items.item_code]=items
+		
+	indexed = 1
+	for d_item in sorted(dict1):
+		dict1[d_item].idx = indexed
+		docitems.append(dict1[d_item])
+		indexed+=1
+	
+	doc.items=docitems		
 	
 	
 	
